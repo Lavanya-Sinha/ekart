@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto+Mono:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d30a3099f9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./lips.html" />
+    <link rel="stylesheet" href="./eyes.html" />
+    <script src="../others/server.js"></script>
+    <title>Rare Beauty</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0, 0, 0,20px;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        color: rgb(124, 34, 55);
+        text-rendering: optimizeLegibility;
+        text-decoration: none;
+      }
+
+      .main_header {
+        display: flex;
+        text-align: center;
+        letter-spacing: 0em;
+        position: relative;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+      }
+
+      .heading {
+        margin-left: 100px;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Roboto Mono", monospace;
+      }
+      .category {
+        margin-left: 50px;
+      }
+
+      span {
+        background-color: white;
+        border: 1px rgb(124, 34, 55) solid;
+        padding: 10px;
+        margin: 2px;
+        font-size: small;
+        transition-duration: 0.3s;
+        transition-delay: 0.1s;
+        text-decoration: none !important;
+        color: #7c2237 !important;
+       
+      }
+      .main_nav{
+        text-decoration: none;
+        color: #7c2237;
+      }
+
+      .a {
+        color: rgb(124, 34, 55) !important;
+        text-decoration: none !important;
+        transition-duration: 0.3s;
+        transition-delay: 0.1s;
+      
+      }
+      span:hover {
+        background-color: rgb(124, 34, 55);
+      }
+
+      a:hover {
+        color: white;
+      }
+      .home {
+        background-color: rgb(124, 34, 55);
+      }
+      .lip {
+        background-color: rgb(124, 34, 55);
+        text-decoration: none;
+        color: #7c2237;
+      }
+      .eye {
+        background-color: rgb(124, 34, 55);
+      }
+      .active_link {
+        color: white;
+      }
+      .card {
+        width: fit-content;
+        border: 1px solid rgb(124, 34, 55);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 10px;
+      }
+      .card img {
+        width: 200px;
+        height: auto;
+      }
+        .container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+      }
+     
+
+      .add-to-bag {
+        background-color: white;
+        border: 1px solid rgb(124, 34, 55);
+        padding: 5px;
+        font-size: small;
+        transition-duration: 0.3s;
+        transition-delay: 0.1s;
+        color: #7c2237;
+        width: 200px;
+        font-stretch: expanded;
+      }
+      .add-to-bag:hover {
+        background-color: rgb(124, 34, 55);
+        color: white;
+        cursor: pointer;
+      }
+      .footer {
+        margin-top: 30px;
+        text-align: right;
+        font-size: medium;
+      }
+      .review:hover {
+        color: rgb(124, 34, 55);
+        text-decoration: underline;
+      }
+      .card-link:hover {
+        color: rgb(124, 34, 55);
+        text-decoration: underline;
+      }
+      .product_heading {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Roboto Mono", monospace;
+      }
+
+      .fa-solid {
+        color: #7c2237;
+       
+      }
+
+      .collect p {
+        height: 22px;
+        width: 22px;
+        display: inline;
+        padding: 10px;
+      
+      }
+
+      .collect {
+        display: flex;
+       float : right;
+        padding: 10px;
+        max-width : 100px;
+        overflow: hidden;
+        margin-top: 95px;
+        
+      }
+      .text {
+        display: flex;
+       justify-content: flex-end;
+       align-items: flex-end;
+       max-width: 100%;
+       height: 100%;
+      
+      }
+
+      #root{
+    width: 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+      
+.sidebar{
+    width: 400px;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+    height: 1500px;
+    margin-top: 30px;
+}
+      .head{
+       
+        background-color: #7c2237;
+        border-radius: 3px;
+        height: 30px;
+        padding: 10px;
+        margin-bottom: 50px;
+        color: white;
+        display: flex;
+       align-items: center;
+       justify-items: center;
+       font-weight: 600;
+      }
+      .main{
+        margin: 0%;
+        padding: 0%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #7c2237;
+}
+        .remove-button{
+          background-color: white;
+        border: 1px solid rgb(124, 34, 55);
+        padding: 5px;
+        font-size: small;
+        transition-duration: 0.3s;
+        transition-delay: 0.1s;
+        color: #7c2237;
+        width: 200px;
+        font-stretch: expanded;
+        }
+
+        .remove-button:hover{
+          background-color: rgb(124, 34, 55);
+        color: white;
+        cursor: pointer;
+        }
+
+    </style>
+
+    <div>
+      <header class="main_header"><h1>Care Beauty</h1></header>
+
+      <div class="collect">
+        <div class="fa-sharp fa-solid fa-cart-shopping" style="color: #7c2237">
+          
+        </div>
+      </div>
+      
+        <div class="heading"><h3>Browse All Beauty Products</h3></div>
+       
+         <div class="main">
+        <div class="container">
+          <% documents[0].arr.forEach(function(document) { %>
+          <div class="card">
+            <img src="<%= document.img %>" alt="lipstick" />
+            <div class="card-content">
+              <h3 class="card-title"><%= document.data %></h3>
+              <p class="card-text">
+                <%= document.review %> <a href="#" class="review">Reviews</a>
+              </p>
+
+              <p>
+                <button class="add-to-bag"
+                  data-product-image="<%= document.img %>"
+                  data-product-name="<%= document.data %>"
+                  data-product-price="<%= document.price %>">
+                  Add to Bag <%= document.price %>
+                </button>
+              </p>
+              <div class="cart-item" data-product-id="<%= document.productId %>">
+                
+               
+              </div>
+              
+              
+            </div>
+          </div>
+          <% }); %>
+          
+        </div>
+        <div class="text">
+          <div id="root"></div>
+          <div class="sidebar">
+            <div class="head"><p>My Bag</p></div>
+            <div id="cartItem">Your Bag is empty</div>
+            <div class="foot">
+              <h3>Total</h3>
+              <h3 id="total">$ 0.00</h3>
+            </div>
+          </div>
+          </div>
+         </div>
+        <footer class="footer">@copyright Rare Beauty</footer>
+      </div>
+    </div>
+<script>
+
+
+const addToBagButtons = document.querySelectorAll('.add-to-bag');
+let shoppingCart = [];
+let index = 0;
+
+addToBagButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const productName = event.target.getAttribute('data-product-name');
+    const productPrice = parseFloat(event.target.getAttribute('data-product-price'));
+    const productImage = event.target.getAttribute('data-product-image');
+
+    // Add the selected product to the shopping cart array
+    shoppingCart.push({ image: productImage, name: productName, price: productPrice });
+
+    index++;
+
+    // Update the shopping cart display
+    updateShoppingCartDisplay();
+  });
+});
+
+function updateShoppingCartDisplay() {
+  // Get the HTML element where you want to display the cart contents
+  const cartContainer = document.getElementById('cartItem');
+
+  // Clear the current contents of the cart display
+  cartContainer.innerHTML = '';
+
+  // Loop through the shoppingCart array and render each item
+  shoppingCart.forEach((item, index) => {
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+
+    // Create elements to display the item name, image, and price
+    const itemName = document.createElement('div');
+    itemName.textContent = item.name;
+
+    const itemImage = document.createElement('img'); // Use <img> for displaying images
+    itemImage.src = item.image; // Set the image source
+    itemImage.width = 200; // Set the width of the image (adjust to your desired size)
+    itemImage.height = 200; // Set the height of the image (adjust to your desired size)
+
+    const itemPrice = document.createElement('div');
+    itemPrice.textContent = `$${item.price.toFixed(2)}`;
+
+    // Create the "Remove" button
+    const removeButton = document.createElement('button');
+    removeButton.classList.add('remove-button');
+    removeButton.textContent = 'Remove';
+    removeButton.dataset.productIndex = index; // Set the product index as a data attribute
+     
+    // Add an event listener to the "Remove" button
+    removeButton.addEventListener('click', (event) => {
+      const productIndex = event.target.getAttribute('data-product-index');
+      if (productIndex !== null) {
+        shoppingCart.splice(productIndex, 1); // Remove the product from the cart
+        updateShoppingCartDisplay(); // Update the cart display
+      }
+    });
+
+    // Append the item name, image, and price to the cart item container
+    cartItem.appendChild(itemName);
+    cartItem.appendChild(itemImage); // Append the image element
+    cartItem.appendChild(itemPrice);
+    cartItem.appendChild(removeButton); // Append the remove button
+
+    // Append the cart item to the cart container
+    cartContainer.appendChild(cartItem);
+  });
+
+  // Calculate and display the total price
+  const total = shoppingCart.reduce((acc, item) => acc + item.price, 0);
+  const totalDisplay = document.getElementById('total');
+  totalDisplay.textContent = `$${total.toFixed(2)}`;
+}
+
+// Initialize the shopping cart display
+updateShoppingCartDisplay();
+
+
+</script>
+
+
+
+  </body>
+</html>
